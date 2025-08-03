@@ -49,7 +49,7 @@ app/
 
 ```bash
 git clone https://github.com/your-username/fastapi-todo-api.git
-cd fastapi-todo-api
+cd fastapi-todo-api```
 
 ### Create .env
 SECRET_KEY=your_secret_key
