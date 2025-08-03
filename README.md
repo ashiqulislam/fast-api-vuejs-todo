@@ -101,4 +101,4 @@ Bearer <your-token>
 All endpoints require a valid JWT token.
 
 📄 License
-MIT © Ashiqul Islam 
+MIT © [Ashiqul Islam](https://github.com/ashiqulislam) 
