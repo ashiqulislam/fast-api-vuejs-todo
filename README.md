@@ -23,7 +23,7 @@ A simple, token-based authenticated Todo API built with FastAPI, SQLAlchemy, JWT
 - Pydantic
 - JWT (via `python-jose`)
 - Docker + Docker Compose
-- Vue 3 frontend (optional)
+- Vue 3 frontend
 
 ---
 
