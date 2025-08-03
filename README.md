@@ -28,9 +28,8 @@ A simple, token-based authenticated Todo API built with FastAPI, SQLAlchemy, JWT
 ---
 
 ## 🛠 Project Structure
-
+```
 app/
-│
 ├── controllers/ # Business logic
 ├── database.py # DB connection
 ├── models.py # SQLAlchemy models
@@ -39,6 +38,8 @@ app/
 ├── schemas.py # Pydantic schemas
 ├── main.py # App entrypoint
 └── auth.py # JWT creation & verification
+```
+
 
 
 ---
@@ -49,26 +50,36 @@ app/
 
 ```bash
 git clone https://github.com/your-username/fastapi-todo-api.git
-cd fastapi-todo-api```
+cd fastapi-todo-api
+```
 
 ### Create .env
+```
 SECRET_KEY=your_secret_key
 DATABASE_URL=postgresql://user:password@db:5432/db_name
+```
 
 Or for MariaDB:
+```
 DATABASE_URL=mysql+pymysql://user:password@db:3306/db_name
-
+```
 
 ### 3. Start with Docker
+```
 docker-compose up --build
+```
 
 The API will be running at:
+```
 http://localhost:8000
+```
 
 ### 4. Docs & Testing
 Open:
+```
 📘 Swagger UI → http://localhost:8000/docs
 🔍 ReDoc → http://localhost:8000/redoc
+```
 
 
 🔐 Authentication
