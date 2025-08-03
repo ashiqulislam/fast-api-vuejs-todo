@@ -1,0 +1,39 @@
+# version: '3.8'
+
+services:
+  
+  python:
+    build: 
+      context: .
+      dockerfile: dockerfiles/python.dockerfile
+    volumes:
+      - './backend:/app'
+    env_file:
+      - ./backend/.env
+    depends_on:
+      - db
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+    ports:
+      - "8000:8000"
+
+  db:
+    image: postgres:17
+    environment:
+      POSTGRES_USER: todo_user
+      POSTGRES_PASSWORD: secret
+      POSTGRES_DB: todo_db
+    volumes:
+      - ./db:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+
+  pnpm:
+    build: 
+      context: .
+      dockerfile: dockerfiles/pnpm.dockerfile
+    volumes:
+      - './frontend:/app'
+    command: npm run dev -- --host 0.0.0.0 --port 5173
+    ports:
+      - '5173:5173'
